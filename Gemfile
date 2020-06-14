@@ -34,7 +34,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 
 
-# gem 'puma', '~> 3.11'
+
 
 
 
@@ -78,30 +78,13 @@ gem 'dry-configurable', '0.9.0'
 
 # gem 'dry-configurable', '0.11.3'
 
-gem 'nokogiri', '1.10.3'
-
-
-
+gem 'nokogiri', '1.10.8'
 gem 'pagy'
-
-
-
-gem 'puma'
-
-
-
+# gem 'puma'
+gem 'puma', '~> 4.3.5'
 gem 'rb-readline'
-
-
-
 gem 'ruby-progressbar'
-
-
-
 gem 'tzinfo-data'
-
-
-
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 
