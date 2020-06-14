@@ -78,7 +78,7 @@ gem 'dry-configurable', '0.9.0'
 
 # gem 'dry-configurable', '0.11.3'
 
-gem 'nokogiri', '1.10.3'
+gem 'nokogiri', '1.10.8'
 
 
 
