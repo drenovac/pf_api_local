@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    # networks:
+    #   - webnet
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    build: .
+    # networks:
+    #   - webnet
+    command: bash -c "bundle exec rails s -p 3000 -e production"
+    volumes:
+      - '.:/app'
+    ports:
+      - '3000:3000'
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://postgres@db
+    depends_on:
+      - db
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.template:/etc/nginx/conf.d/default.template
+      - ./files:/files
+    ports:
+      - "80:80"
+    # networks:
+    #   - webnet
+    depends_on:
+      - web
+    command: /bin/bash -c "cat /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
