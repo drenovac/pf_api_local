@@ -78,7 +78,7 @@ gem 'dry-configurable', '0.9.0'
 
 # gem 'dry-configurable', '0.11.3'
 
-gem 'nokogiri', '1.10.8'
+gem 'nokogiri', '1.13.6'
 gem 'pagy'
 # gem 'puma'
 gem 'puma', '~> 4.3.5'
