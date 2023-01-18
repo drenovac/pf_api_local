@@ -129,7 +129,7 @@ GEM
     pg (1.2.2-x64-mingw32)
     puma (4.3.5)
       nio4r (~> 2.0)
-    rack (2.2.2)
+    rack (2.2.6.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-test (1.1.0)
@@ -190,7 +190,6 @@ GEM
       dry-configurable (~> 0.8)
       jwt (~> 2.1)
       warden (~> 1.2)
-    wdm (0.1.1)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -219,7 +218,6 @@ DEPENDENCIES
   rb-readline
   ruby-progressbar
   tzinfo-data
-  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.1.4
